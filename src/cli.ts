@@ -15,8 +15,8 @@ import { registerNotificationCommands } from './commands/notifications.js';
 const program = new Command();
 
 program
-  .name('xfetch')
-  .description('Fast X/Twitter CLI scraper. No API keys. Just cookies and go.')
+  .name('xreach')
+  .description('Fast X/Twitter CLI — search, read, and extract. Part of Agent Reach.')
   .version(version, '-v, --version');
 
 // Global options

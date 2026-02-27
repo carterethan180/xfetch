@@ -1,12 +1,12 @@
 {
-  "name": "xfetch-cli",
-  "version": "0.2.1",
-  "description": "Fast X/Twitter CLI scraper. No API keys. Just cookies and go.",
+  "name": "xreach-cli",
+  "version": "0.3.0",
+  "description": "Fast X/Twitter CLI \u2014 search, read, and extract. Part of the Agent Reach ecosystem.",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "xfetch": "dist/cli.js"
+    "xreach": "dist/cli.js"
   },
   "scripts": {
     "build": "tsc",
@@ -21,23 +21,21 @@
     "x",
     "scraper",
     "cli",
-    "graphql",
+    "agent-reach",
     "tweets",
-    "twitter-scraper",
-    "x-scraper",
-    "tweet-scraper",
-    "social-media",
-    "data-extraction"
+    "search",
+    "graphql",
+    "social-media"
   ],
-  "author": "LXGIC Studios <hello@lxgic.studio>",
+  "author": "Neo Reid <neo@panniantong.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/LXGIC-Studios/xfetch.git"
+    "url": "git+https://github.com/Panniantong/xfetch.git"
   },
-  "homepage": "https://github.com/LXGIC-Studios/xfetch#readme",
+  "homepage": "https://github.com/Panniantong/xfetch#readme",
   "bugs": {
-    "url": "https://github.com/LXGIC-Studios/xfetch/issues"
+    "url": "https://github.com/Panniantong/xfetch/issues"
   },
   "engines": {
     "node": ">=18.0.0"
