@@ -171,7 +171,20 @@ export class TweetMixin extends BaseClient {
       // Handle TimelineAddEntries (main tweets list)
       if (instruction.type === 'TimelineAddEntries') {
         for (const entry of instruction.entries || []) {
-          if (entry.content?.itemContent?.tweet_results?.result) {
+          // Handle conversation modules with items array (new format) - only take first item
+          if (entry.content?.items && Array.isArray(entry.content.items) && entry.content.items.length > 0) {
+            const firstItem = entry.content.items[0];
+            const tweetResult = firstItem.item?.itemContent?.tweet_results?.result;
+            if (tweetResult) {
+              try {
+                tweets.push(this.parseTweet(tweetResult));
+              } catch (e) {
+                // Skip unavailable tweets
+              }
+            }
+          }
+          // Handle individual tweet entries (old format)
+          else if (entry.content?.itemContent?.tweet_results?.result) {
             try {
               tweets.push(this.parseTweet(entry.content.itemContent.tweet_results.result));
             } catch (e) {
